@@ -7,6 +7,7 @@ import java.util.Scanner;
 // Пользователю должно показаться сообщение,
 // что пустые строки вводить нельзя.
 public class Lesson2_DZ4 {
+    // мне это решение больше нравиться без exсeption's-а
     public static void main(String[] args) {
         scannerChecker();
     }
@@ -15,9 +16,9 @@ public class Lesson2_DZ4 {
         System.out.print("Введите проку: ");
         String str = scanner.nextLine();
         if(str.isEmpty()){
-//            throw new RuntimeException("Cтрока пустая вводить нельзя....");
-            System.out.println("Введите не пустую строку: ");
-            return scannerChecker();
+            throw new RuntimeException("Пустую строку вводить нельзя....");
+//            System.out.println("Введите не пустую строку: ");
+//            return scannerChecker();
         }else{
             System.out.println("str = " + str);
             return str;
