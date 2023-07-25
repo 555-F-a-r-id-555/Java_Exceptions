@@ -13,7 +13,7 @@ public class Lesson2_DZ4 {
     }
     private static String scannerChecker() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите проку: ");
+        System.out.print("Введите сроку: ");
         String str = scanner.nextLine();
         if(str.isEmpty()){
             throw new RuntimeException("Пустую строку вводить нельзя....");
