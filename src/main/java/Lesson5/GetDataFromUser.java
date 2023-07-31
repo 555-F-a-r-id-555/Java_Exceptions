@@ -29,19 +29,19 @@ public class GetDataFromUser {
         String gender = dataArray[5];
 
         if (!isValidName(firstName)) {
-            System.err.println("Имя написано с ошибкой");
+            System.err.println("Имя , должно содержать только буквы");
             return getData();
         } else if (!isValidName(lastName)) {
-            System.err.println("Фамилия написана с ошибкой");
+            System.err.println("Фамилия, должно содержать только буквы");
             return getData();
         } else if (!isValidName(middleName)) {
-            System.err.println("Отчество написано с ошибкой");
+            System.err.println("Отчество, должно содержать только буквы");
             return getData();
         } else if (!isValidDate(birthDate)) {
             System.err.println("Дата рождения введена неверно");
             return getData();
         } else if (!isValidNumber(phoneNumber)) {
-            System.err.println("Номер должен содержать только цифры");
+            System.err.println("Номер, должен содержать только цифры");
             return getData();
         } else if (!isValidGender(gender)) {
             System.err.println("Пол: m or f");
@@ -69,76 +69,3 @@ public class GetDataFromUser {
     }
 }
 
-/* first version
-
-public class GetDataFromUser {
-
-    public String[] getData() {
-        Scanner scanner = new Scanner(System.in);
-        String data = scanner.nextLine();
-        String[] strArray = data.split("\\s+");
-
-
-        if (strArray.length != 6) try {
-            throw new Exception();
-        } catch (Exception e) {
-            System.err.println("Вы ввели n = " + strArray.length + ", нужно 6 строк, разделенных пробелом");
-            System.out.println("Введите еще раз:");
-            return getData();
-        }
-        else {
-            if (!strArray[0].matches("(?iu)^[а-яёA-Z]+$")) {
-                try {
-                    throw new Exception();
-                } catch (Exception e) {
-                    System.err.println("Имя написано с ошибкой");
-                    return getData();
-                }
-            } else if (!strArray[1].matches("(?iu)^[а-яёA-Z]+$")) {
-                try {
-                    throw new Exception();
-                } catch (Exception e) {
-                    System.err.println("Фамилие написано с ошибкой ");
-                    return getData();
-                }
-            } else if (!strArray[2].matches("(?iu)^[а-яёA-Z]+$")) {
-                try {
-                    throw new Exception();
-                } catch (Exception e) {
-                    System.err.println("Отчество написано с ошибкой ");
-                    return getData();
-                }
-
-            } else if (!strArray[3].matches("^[0-3][0-9].[01][0-9].[12][09][0-9][0-9]$")) {
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.err.println("Дата рождения введена неверно  ");
-                    return getData();
-                }
-
-            } else if (!strArray[4].matches("^[0-9]+$")) {
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.err.println("Номер должен содержать только цифры ");
-                    return getData();
-                }
-
-            } else if (!(strArray[5].equals("m") || strArray[5].equals("f"))) {
-                try {
-                    throw new IOException();
-                } catch (IOException e) {
-                    System.err.println("Пол: m or f");
-                    return getData();
-                }
-            }
-
-        }
-
-
-//        System.out.println(Arrays.toString(strArray));
-        return strArray;
-    }
-}
-*/
