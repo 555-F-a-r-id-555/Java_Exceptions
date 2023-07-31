@@ -45,12 +45,11 @@ package Lesson5;
 //Косолапкина Елена Александровна 21.11.1995 5555 f
 
 
-import java.io.IOException;
-import java.net.URISyntaxException;
+
 
 
 public class Main {
-    public static void main(String[] args) throws URISyntaxException, IOException {
+    public static void main(String[] args) {
 
 
         GetDataFromUser getDataFromUser = new GetDataFromUser();

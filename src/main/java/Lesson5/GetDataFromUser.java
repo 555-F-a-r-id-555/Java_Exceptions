@@ -12,6 +12,7 @@ public class GetDataFromUser {
 
     public String[] getData() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите: Фамилия Имя Отчество дату рождения номер телефона пол ,разделенные пробелом....");
         String data = scanner.nextLine();
         String[] dataArray = data.split("\\s+");
 
