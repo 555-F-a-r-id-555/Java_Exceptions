@@ -1,15 +1,12 @@
 package Lesson5;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class GetDataFromUser {
     private static final Pattern NAME_PATTERN = Pattern.compile("(?iu)^[а-яёA-Z]+$");
-    private static final Pattern DATE_PATTERN = Pattern.compile("^[0-3][0-9].[01][0-9].[12][09][0-9][0-9]$");
+    private static final Pattern DATE_PATTERN = Pattern.compile("^[0-3][0-9]\\.[01][0-9]\\.[12][09][0-9][0-9]$");
     private static final Pattern NUMBER_PATTERN = Pattern.compile("^[0-9]+$");
     private static final Pattern GENDER_PATTERN = Pattern.compile("^[mf]$");
 

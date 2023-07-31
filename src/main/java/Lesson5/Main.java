@@ -36,7 +36,7 @@ package Lesson5;
         пользователь должен увидеть стектрейс ошибки.*/
 
 // примеры:
-//Фамилия Имя Отчество датарождения номертелефона пол
+//Фамилия Имя Отчество дата рождения номер телефона пол
 //Ардаков Игорь Герасимович 11.11.1987 5555 m
 //Бирюков Евгений Евгеньевич 01.11.1977 5555 m
 //Бирюков Евгений Евгеньевич 09.11.1997 5555 m
@@ -44,16 +44,10 @@ package Lesson5;
 //Коваль Лариса Дмитриевна 07.11.1990 5555 f
 //Косолапкина Елена Александровна 21.11.1995 5555 f
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
+
 
 public class Main {
     public static void main(String[] args) throws URISyntaxException, IOException {
