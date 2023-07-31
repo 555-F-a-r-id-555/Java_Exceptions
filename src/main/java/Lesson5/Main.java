@@ -41,7 +41,7 @@ package Lesson5;
 //Бирюков Евгений Евгеньевич 01.11.1977 5555 m
 //Бирюков Евгений Евгеньевич 09.11.1997 5555 m
 //Угаров Виктор Михайлович 12.11.1989 5555 m
-//Коваль Лариса Дмитриевна 07.11.1990 5555
+//Коваль Лариса Дмитриевна 07.11.1990 5555 f
 //Косолапкина Елена Александровна 21.11.1995 5555 f
 
 import java.io.File;
@@ -63,7 +63,7 @@ public class Main {
         String[] resArray = getDataFromUser.getData();
 //        System.out.println(Arrays.toString(resArray));
 
-        WriteFile myClass = new WriteFile();
+        WriteFile writeFile = new WriteFile();
         ReadFile readFile = new ReadFile();
 
 
@@ -78,8 +78,8 @@ public class Main {
         String resString = new String(res);
 
 
-        System.out.println("<---------------Запись в файл либо вывод уже существующих данных---------------->");
-        myClass.WriteLines(resString, fileName, directory);
+        System.out.println("<---------------Запись в файл, либо вывод уже существующих данных---------------->");
+        writeFile.writeLineToFile(resString, fileName, directory);
         System.out.println("<---------------Чтение из файла------------------------------------------------->");
         readFile.readLines(directory, fileName);
 
